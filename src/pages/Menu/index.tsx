@@ -1,8 +1,9 @@
-import styles from './Menu.module.scss';
+import Filter from 'pages/Filter';
 import logo from 'assets/logo.png';
 import Search from 'pages/Search';
-import 'normalize.css';
+import styles from './Menu.module.scss';
 import { useState } from 'react';
+import 'normalize.css';
 
 
 export default function Menu() {
@@ -22,6 +23,9 @@ export default function Menu() {
             <section className={styles.cardapio}>
                 <h3 className={styles.cardapio_titulo}>Cardápio</h3>
                 <Search search={search} setSearch={setSearch} />
+                <div className={styles.cardapio__filtros}>
+                    <Filter />
+                </div>
             </section>
         </main>
     )

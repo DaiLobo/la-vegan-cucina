@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Entradas",
+        "id": 1
+    },
+    {
+        "label": "Prato Gourment",
+        "id": 2
+    },
+    {
+        "label": "Sopas",
+        "id": 3
+    },
+    {
+        "label": "Tapioca",
+        "id": 4
+    },
+    {
+        "label": "Pane Tostato",
+        "id": 5
+    },
+    {
+        "label": "Hamburguer",
+        "id": 6
+    }
+]
