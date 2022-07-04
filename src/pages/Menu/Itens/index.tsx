@@ -27,11 +27,24 @@ export default function Itens({
         return true;
     }
 
+    function toSort(newList: typeof menu) {
+        switch(sort) {
+            case 'porcao':
+                return newList.sort((a, b) => a.size > b.size ? 1 : -1);
+            case 'qtd_pessoas':
+                return newList.sort((a, b) => a.serving > b.serving ? 1 : -1);
+            case 'preco':
+                return newList.sort((a, b) => a.price > b.price ? 1 : -1);
+            default:
+                return newList;
+        }
+    }
+
     useEffect(() => {
         const newList = menu.filter(
             item => testaBusca(item.title) && testaFiltro(item.category.id));
-            setList(newList);
-    },[search, filter])
+            setList(toSort(newList));
+    },[search, filter, sort])
 
     return (
         <div className={styles.itens}>
