@@ -1,16 +1,17 @@
-import Filter from 'pages/Filter';
+import Filter from 'pages/Menu/Filter';
 import logo from 'assets/logo.png';
-import Search from 'pages/Search';
+import Search from 'pages/Menu/Search';
 import styles from './Menu.module.scss';
 import { useState } from 'react';
 import 'normalize.css';
-import Sort from 'pages/Sort';
+import Sort from 'pages/Menu/Sort';
 
 
 export default function Menu() {
 
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState<number | null>(null);
+    const [sort, setSort] = useState('');
 
     return (
         <main>
@@ -27,7 +28,7 @@ export default function Menu() {
                 <Search search={search} setSearch={setSearch} />
                 <div className={styles.cardapio__filtros}>
                     <Filter filter={filter} setFilter={setFilter} />
-                    <Sort />
+                    <Sort sort={sort} setSort={setSort} />
                 </div>
             </section>
         </main>
