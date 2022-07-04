@@ -5,6 +5,7 @@ import styles from './Menu.module.scss';
 import { useState } from 'react';
 import 'normalize.css';
 import Sort from 'pages/Menu/Sort';
+import Itens from './Itens';
 
 
 export default function Menu() {
@@ -30,6 +31,7 @@ export default function Menu() {
                     <Filter filter={filter} setFilter={setFilter} />
                     <Sort sort={sort} setSort={setSort} />
                 </div>
+                <Itens />
             </section>
         </main>
     )
