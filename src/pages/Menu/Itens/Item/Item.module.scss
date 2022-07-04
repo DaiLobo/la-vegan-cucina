@@ -1,10 +1,12 @@
 @import "styles/variaveis";
 @import "styles/breakpoints";
 
-$massas: #d73b3b;
-$carnes: #30201e;
-$combos: #e6c864;
-$veganos: #80aa40;
+$entradas: #d73b3b;
+$hamburguer: #30201e;
+$sopas: #e6c864;
+$tapioca: #80aa40;
+$gourment: #cf25c7;
+$tostato: #62e0da;
 
 .item {
     display: flex;
@@ -71,19 +73,26 @@ $veganos: #80aa40;
         height: 40px;
         justify-content: center;
         padding: 10px 30px;
-        &__massas {
-            background-color: $massas;
+        &__entradas {
+            background-color: $entradas;
             color: white;
         }
-        &__carnes {
-            background-color: $carnes;
+        &__hamburguer {
+            background-color: $hamburguer;
             color: white;
         }
-        &__combos {
-            background-color: $combos;
+        &__sopas {
+            background-color: $sopas;
         }
-        &__veganos {
-            background-color: $veganos;
+        &__tapioca {
+            background-color: $tapioca;
+        }
+        &__gourment {
+            background-color: $gourment;
+            color: white;
+        }
+        &__tostato {
+            background-color: $tostato;
         }
     }
     &__porcao,
