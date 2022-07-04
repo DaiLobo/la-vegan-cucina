@@ -25,13 +25,13 @@ export default function Menu() {
                 </div>
             </header>
             <section className={styles.cardapio}>
-                <h3 className={styles.cardapio_titulo}>Cardápio</h3>
+                <h3 className={styles.cardapio__titulo}>Cardápio</h3>
                 <Search search={search} setSearch={setSearch} />
                 <div className={styles.cardapio__filtros}>
                     <Filter filter={filter} setFilter={setFilter} />
                     <Sort sort={sort} setSort={setSort} />
                 </div>
-                <Itens />
+                <Itens search={search} filter={filter} sort={sort}/>
             </section>
         </main>
     )

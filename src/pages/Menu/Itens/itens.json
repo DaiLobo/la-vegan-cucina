@@ -9,7 +9,7 @@
     "id": 1,
     "category": {
       "id": 1,
-      "label": "Massas"
+      "label": "Entradas"
     }
   },
   {
@@ -22,7 +22,7 @@
     "id": 2,
     "category": {
       "id": 1,
-      "label": "Massas"
+      "label": "Entradas"
     }
   },
   {
@@ -35,7 +35,7 @@
     "id": 3,
     "category": {
       "id": 1,
-      "label": "Massas"
+      "label": "Entradas"
     }
   },
   {
@@ -48,7 +48,7 @@
     "id": 4,
     "category": {
       "id": 2,
-      "label": "Carnes"
+      "label": "Prato Gourment"
     }
   },
   {
@@ -61,7 +61,7 @@
     "id": 5,
     "category": {
       "id": 2,
-      "label": "Carnes"
+      "label": "Prato Gourment"
     }
   },
   {
@@ -74,7 +74,7 @@
     "id": 6,
     "category": {
       "id": 3,
-      "label": "Combos"
+      "label": "Sopas"
     }
   },
   {
@@ -87,7 +87,7 @@
     "id": 7,
     "category": {
       "id": 4,
-      "label": "Veganos"
+      "label": "Tapioca"
     }
   },
   {
@@ -99,8 +99,8 @@
     "price": 37.0,
     "id": 8,
     "category": {
-      "id": 4,
-      "label": "Veganos"
+      "id": 5,
+      "label": "Pane Tostato"
     }
   },
   {
@@ -112,8 +112,8 @@
     "price": 120.0,
     "id": 9,
     "category": {
-      "id": 3,
-      "label": "Combos"
+      "id": 6,
+      "label": "Hamburguer"
     }
   }
 ]
