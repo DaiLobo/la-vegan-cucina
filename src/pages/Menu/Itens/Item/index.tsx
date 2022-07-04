@@ -1,29 +1,39 @@
+import logo from 'assets/logo.png';
+import menu from '../itens.json';
 import styles from './Item.module.scss';
-import logo from 'assets/logo.png'
 
-export default function Item() {
+type Menu = typeof menu[0];
+
+export default function Item({
+     title,
+     description,
+     category,
+     size,
+     serving,
+     price,
+     }: Menu) {
     return (
         <div className={styles.item}>
             <div className={styles.item__imagem}>
-                <img src={logo} alt="imagem" />
+                <img src={logo} alt={title} />
             </div>
-            <div className={styles.item_descricao}>
+            <div className={styles.item__descricao}>
                 <div className={styles.item__titulo}>
-                    <h2> Macarrão </h2>
-                    <p> Descrição do macarrão</p>
+                    <h2> { title } </h2>
+                    <p> { description } </p>
                 </div>
                 <div className={styles.item__tags}>
                     <div className={styles.item__tipo}>
-                        Massa
+                        { category.label }
                     </div>
                     <div className={styles.item__porcao}>
-                        400g
+                        { size }g
                     </div>
-                    <div className={styles.item_qtdpessoas}>
-                        Serve 2 pessoas
+                    <div className={styles.item__qtdpessoas}>
+                        Serve { serving } pessoa{ serving === 1 ? '' : 's' }
                     </div>
                     <div className={styles.item__valor}>
-                        R$ 50
+                        R$ { price.toFixed(2) }
                     </div>
                 </div>
             </div>

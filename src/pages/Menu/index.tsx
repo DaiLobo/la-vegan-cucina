@@ -1,11 +1,11 @@
 import Filter from 'pages/Menu/Filter';
+import Itens from './Itens';
 import logo from 'assets/logo.png';
 import Search from 'pages/Menu/Search';
+import Sort from 'pages/Menu/Sort';
 import styles from './Menu.module.scss';
 import { useState } from 'react';
 import 'normalize.css';
-import Sort from 'pages/Menu/Sort';
-import Itens from './Itens';
 
 
 export default function Menu() {
