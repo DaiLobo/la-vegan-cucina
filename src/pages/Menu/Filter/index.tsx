@@ -11,27 +11,27 @@ interface Props {
 }
 
 export default function Filter({ filter, setFilter }: Props) {
-    const selectFilter = (option: IOption) => {
-        if (filter === option.id) {
-           return setFilter(null);
-        }
-        return setFilter(option.id)
+  const selectFilter = (option: IOption) => {
+    if (filter === option.id) {
+      return setFilter(null);
     }
-    return (
-        <div className={styles.filtros}>
-            {
-                filters.map((option) => (
-                    <button
-                        className={classNames({
-                            [styles.filtros__filtro]: true,
-                            [styles['filtros__filtro--ativo']]: filter === option.id
-                        })}
-                        key={option.id}
-                        onClick={() => selectFilter(option)}>
-                            {option.label}
-                    </button>
-                ))
-            }
-        </div>
-    )
+    return setFilter(option.id);
+  };
+  return (
+    <div className={styles.filtros}>
+      {
+        filters.map((option) => (
+          <button
+            className={classNames({
+              [styles.filtros__filtro]: true,
+              [styles['filtros__filtro--ativo']]: filter === option.id
+            })}
+            key={option.id}
+            onClick={() => selectFilter(option)}>
+            {option.label}
+          </button>
+        ))
+      }
+    </div>
+  );
 }
