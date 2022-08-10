@@ -1,5 +1,5 @@
 import Item from './Item';
-import menu from './itens.json';
+import menu from 'data/menu.json';
 import styles from './Itens.module.scss';
 import { useEffect, useState } from 'react';
 

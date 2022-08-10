@@ -9,29 +9,29 @@ import 'normalize.css';
 
 export default function Menu() {
 
-    const [search, setSearch] = useState('');
-    const [filter, setFilter] = useState<number | null>(null);
-    const [sort, setSort] = useState('');
+  const [search, setSearch] = useState('');
+  const [filter, setFilter] = useState<number | null>(null);
+  const [sort, setSort] = useState('');
 
-    return (
-        <main>
-            <nav className={styles.menu}>
-                <img src={logo} alt='La Cucina Vegana' width={180} />
-            </nav>
-            <header className={styles.header}>
-                <div className={styles.header__text}>
-                    La casa do código verde
-                </div>
-            </header>
-            <section className={styles.cardapio}>
-                <h3 className={styles.cardapio__titulo}>Cardápio</h3>
-                <Search search={search} setSearch={setSearch} />
-                <div className={styles.cardapio__filtros}>
-                    <Filter filter={filter} setFilter={setFilter} />
-                    <Sort sort={sort} setSort={setSort} />
-                </div>
-                <Itens search={search} filter={filter} sort={sort}/>
-            </section>
-        </main>
-    )
+  return (
+    <main>
+      <nav className={styles.menu}>
+        <img src={logo} alt='La Cucina Vegana' width={180} />
+      </nav>
+      <header className={styles.header}>
+        <div className={styles.header__text}>
+			La casa do código verde
+        </div>
+      </header>
+      <section className={styles.cardapio}>
+        <h3 className={styles.cardapio__titulo}>Cardápio</h3>
+        <Search search={search} setSearch={setSearch} />
+        <div className={styles.cardapio__filtros}>
+          <Filter filter={filter} setFilter={setFilter} />
+          <Sort sort={sort} setSort={setSort} />
+        </div>
+        <Itens search={search} filter={filter} sort={sort}/>
+      </section>
+    </main>
+  );
 }
