@@ -3,6 +3,7 @@ import Itens from './Itens';
 import Search from 'pages/Menu/Search';
 import Sort from 'pages/Menu/Sort';
 import styles from './Menu.module.scss';
+import stylesTema from '../../styles/theme.module.scss';
 import { useState } from 'react';
 import 'normalize.css';
 
@@ -13,8 +14,8 @@ export default function Menu() {
   const [sort, setSort] = useState('');
 
   return (
-    <section className={styles.cardapio}>
-      <h3 className={styles.cardapio__titulo}>Cardápio</h3>
+    <section className={styles.container}>
+      <h3 className={stylesTema.titulo}>Cardápio</h3>
       <Search search={search} setSearch={setSearch} />
       <div className={styles.cardapio__filtros}>
         <Filter filter={filter} setFilter={setFilter} />

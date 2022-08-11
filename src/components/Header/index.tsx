@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import styles from './Header.module.scss';
+import stylesTema from '../../styles/theme.module.scss';
 
 export default function Header() {
   return (
@@ -9,7 +10,9 @@ export default function Header() {
       La casa do código verde
         </div>
       </header>
-      < Outlet />
+      <div className={stylesTema.container}>
+        <Outlet />
+      </div>
     </>
   );
 }

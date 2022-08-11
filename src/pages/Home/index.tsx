@@ -1,5 +1,6 @@
 import menu from 'data/menu.json';
 import styles from './Home.module.scss';
+import stylesTema from '../../styles/theme.module.scss';
 
 export default function Home() {
   let chefRecomended = [...menu];
@@ -7,7 +8,7 @@ export default function Home() {
 
   return (
     <section>
-      <h3 className={styles.titulo}>
+      <h3 className={stylesTema.titulo}>
         Recomendações da cozinha
       </h3>
       <div className={styles.recomendados}>
