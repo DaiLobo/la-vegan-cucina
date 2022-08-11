@@ -1,14 +1,21 @@
+import Header from 'components/Header';
+import Navbar from 'components/Navbar';
 import Home from 'pages/Home';
 import Menu from 'pages/Menu';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 export default function AppRouter() {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/menu' element={<Menu />} />
-      </Routes>
-    </Router>
+    <main>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Header />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/menu' element={<Menu />} />
+          </Route>
+        </Routes>
+      </Router>
+    </main>
   );
 }
