@@ -1,4 +1,5 @@
 import menu from 'data/menu.json';
+import nossaCasa from '../../assets/casa.jpg';
 import styles from './Home.module.scss';
 import stylesTema from '../../styles/theme.module.scss';
 
@@ -22,6 +23,13 @@ export default function Home() {
             </button>
           </div>
         ))}
+      </div>
+      <h3 className={stylesTema.titulo}> Nossa casa </h3>
+      <div className={styles.nossaCasa}>
+        <img src={nossaCasa} alt='Casa dos veganos'/>
+        <div className={styles.nossaCasa__endereco}>
+        Rua Murilo Pires, 13 <br/> <br/> Fonseca, Niterói - RJ
+        </div>
       </div>
     </section>
   );
