@@ -3,11 +3,17 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Noto+Serif+Display:wght@300&display=swap'); */
 
 body {
-    background-color: #5a4d45;
+	background-color: #5a4d45;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
-    /* font-family: 'Noto Serif Display', serif; */
+	box-sizing: border-box;
+	font-family: 'Josefin Sans', sans-serif;
+	/* font-family: 'Noto Serif Display', serif; */
+}
+
+#root > main.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
