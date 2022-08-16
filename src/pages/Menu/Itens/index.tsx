@@ -1,6 +1,7 @@
 import Item from './Item';
 import menu from 'data/menu.json';
 import styles from './Itens.module.scss';
+import { IMenu } from 'types/Dish';
 import { useEffect, useState } from 'react';
 
 interface Props {
@@ -27,7 +28,7 @@ export default function Itens({
     return true;
   }
 
-  function toSort(newList: typeof menu) {
+  function toSort(newList:  IMenu) {
     switch(sort) {
     case 'porcao':
       return newList.sort((a, b) => a.size > b.size ? 1 : -1);

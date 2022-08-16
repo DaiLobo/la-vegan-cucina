@@ -1,6 +1,6 @@
-import classNames from 'classnames';
 import menu from 'data/menu.json';
 import styles from './Dish.module.scss';
+import Tags from 'components/Tags';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function Dish() {
@@ -9,6 +9,10 @@ export default function Dish() {
   const { id } = useParams();
   const navigate = useNavigate();
   const dish = menu.find(item => item.id === Number(id));
+
+  if(!dish){
+    return '';
+  }
 
   return (
     <>
@@ -29,23 +33,7 @@ export default function Dish() {
           <p className={styles.conteudo__descricao}>
             {dish?.description}
           </p>
-          <div className={styles.tags}>
-            <div className={classNames({
-              [styles.tags__tipo]: true,
-              [styles[`tags__tipo__${dish?.category.label.toLowerCase()}`]]: true
-            })}>
-              { dish?.category.label }
-            </div>
-            <div className={styles.tags__porcao}>
-              { dish?.size }g
-            </div>
-            <div className={styles.tags__qtdpessoas}>
-              Serve { dish?.serving } pessoa{ dish?.serving === 1 ? '' : 's' }
-            </div>
-            <div className={styles.tags__valor}>
-              R$ { dish?.price.toFixed(2) }
-            </div>
-          </div>
+          <Tags { ...dish } />
         </div>
       </section>
     </>

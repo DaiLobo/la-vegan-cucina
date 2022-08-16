@@ -2,6 +2,7 @@ import menu from 'data/menu.json';
 import nossaCasa from '../../assets/casa.jpg';
 import styles from './Home.module.scss';
 import stylesTema from '../../styles/theme.module.scss';
+import { IDish } from 'types/Dish';
 import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
 
   const navigate = useNavigate();
 
-  const redirectedDetails = (dish: typeof menu[0]) => {
+  const redirectedDetails = (dish: IDish) => {
     navigate(`/dish/${dish.id}`, { state: { dish } });
   };
 
