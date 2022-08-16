@@ -2,10 +2,17 @@ import menu from 'data/menu.json';
 import nossaCasa from '../../assets/casa.jpg';
 import styles from './Home.module.scss';
 import stylesTema from '../../styles/theme.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   let chefRecomended = [...menu];
   chefRecomended = chefRecomended.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+  const navigate = useNavigate();
+
+  const redirectedDetails = (dish: typeof menu[0]) => {
+    navigate(`/dish/${dish.id}`, { state: { dish } });
+  };
 
   return (
     <section>
@@ -18,7 +25,10 @@ export default function Home() {
             <div className={styles.recomendado__imagem}> 
               <img src={item.photo} alt={item.title} />
             </div>
-            <button className={styles.recomendado__botao}>
+            <button 
+              className={styles.recomendado__botao}
+              onClick={() => redirectedDetails(item)}
+            >
               Ver mais
             </button>
           </div>
