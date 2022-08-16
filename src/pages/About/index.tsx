@@ -1,11 +1,11 @@
 import styles from './About.module.scss';
 import stylesTema from 'styles/theme.module.scss';
-import casa from 'assets/about/casa.png';
-import massa1 from 'assets/about/massa1.png';
-import massa2 from 'assets/about/massa2.png';
+import casa from 'assets/about/casa.jpg';
+import vegetais1 from 'assets/about/vegetais1.jpg';
+import vegetais2 from 'assets/about/vegetais2.jpg';
 
 export default function About () {
-  const imagens = [massa1, massa2];
+  const imagens = [vegetais1, vegetais2];
   return (
     <section>
       <h3 className={stylesTema.titulo}>
@@ -15,13 +15,13 @@ export default function About () {
         <img src={casa} alt='Casa Vegana' />
         <div className={styles.sobreNos__texto}>
           <p>
-            Nós de La Cucina Vegana oferecemos a vocês, nossos queridos clientes, a Massa Italiana Caseira mais saborosa e sofisticada do Rio de Janeiro! Prezamos pelos ingredientes tradicionais da culinária Italiana, frescos e de excelente qualidade para que sua experiência seja ainda mais intensa!
+            Nós de La Cucina Vegana oferecemos a vocês, nossos queridos clientes, as comidas veganas mais saborosa e sofisticada do Rio de Janeiro! Prezamos pelo sabor das comidas, com vegetais frescos e de excelente qualidade para que sua experiência seja deliciosa!
           </p>
           <p>
-            Também possuímos uma cardápio de carnes com muitas opções de acordo com o seu gosto!
+            Também possuímos uma cardápio diversificado com muitas opções de acordo com o seu gosto!
           </p>
           <p>
-            Para acompanhar as massas italianas, La Cucina Vegana possui uma reserva de vinhos especiais, que harmonizam perfeitamente com o seu parto, seja carne ou massa!
+            Para acompanhar os vegetais, La Cucina Vegana possui uma reserva de vinhos especiais, que harmonizam perfeitamente com o seu parto!
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default function About () {
         {
           imagens.map((imagem, index) => (
             <div key={index} className={styles.imagens__imagem}>
-              <img src={imagem} alt='imagem de massa' />
+              <img src={imagem} alt='imagem de vegetais' />
             </div>
           ))
         }
