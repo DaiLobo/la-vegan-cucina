@@ -1,4 +1,5 @@
 import menu from 'data/menu.json';
+import NotFound from 'pages/NotFound';
 import styles from './Dish.module.scss';
 import Tags from 'components/Tags';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -11,7 +12,7 @@ export default function Dish() {
   const dish = menu.find(item => item.id === Number(id));
 
   if(!dish){
-    return '';
+    return <NotFound />;
   }
 
   return (
